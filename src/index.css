@@ -1,13 +1,57 @@
+/* Import Tailwind's base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Define global styles and custom properties.
+  This is where you can set base font styles, scrollbar styles,
+  and other global settings that apply to the whole application.
+*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-900 text-gray-300 antialiased;
+  font-family: 'Poppins', sans-serif; /* Example of a modern, clean font */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Smooth scrolling behavior for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styling */
+/* This works in Webkit-based browsers like Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Define theme variables for light mode.
+  When the 'light' class is applied to the root <html> or <body> element,
+  these styles will override the default dark mode styles.
+*/
+.light body {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.light ::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
 }
