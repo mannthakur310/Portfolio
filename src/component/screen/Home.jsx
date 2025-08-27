@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import resume from "../../assert/Resume.pdf";
+import resume from "../../assert/MANVENDRA PRATAP SINGH RESUME.pdf";
 
 // Mock Bio data for a runnable example
 const Bio = {
