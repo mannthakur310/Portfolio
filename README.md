@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+## Modern Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio built with React, Tailwind CSS, and tsparticles. It features smooth section navigation, dark/light theme toggle, and sections for About, Skills, Projects, Education, and Contact.
 
-## Available Scripts
+### Demo
+- You can deploy this to Netlify, Vercel, or GitHub Pages. See Deployment below.
 
-In the project directory, you can run:
+### Tech Stack
+- **React 18** (Create React App)
+- **React Router** (SPA navigation)
+- **Tailwind CSS 3** (utility-first styling)
+- **tsparticles** (interactive particle background)
+- **lucide-react** (icons)
+- Tooling: PostCSS, Autoprefixer, concurrently
 
-### `npm start`
+### Project Structure
+```
+portfolio/
+  └─ client/                # React app (Create React App)
+     ├─ public/
+     ├─ src/
+     │  ├─ component/screen/  # Page sections: Home, Skill, Project, Education, Contact
+     │  ├─ index.css           # Tailwind input
+     │  └─ tailwind.css        # Generated Tailwind output
+     ├─ tailwind.config.js
+     ├─ postcss.config.js
+     └─ package.json
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js 18+ and npm
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Quick Start
+```bash
+# From repo root
+cd client
+npm install
+npm start
+```
+- The app runs at `http://localhost:3000`.
 
-### `npm test`
+### Available Scripts (from `client`)
+- `npm start`: Runs Tailwind in watch mode and starts CRA dev server.
+- `npm run build`: Builds Tailwind once and creates a production build.
+- `npm test`: Runs tests in watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Styling with Tailwind
+- Source styles are in `src/index.css` and compiled to `src/tailwind.css`.
+- During development, `npm start` runs Tailwind in watch mode automatically.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Features
+- Dark/Light theme toggle
+- Smooth scroll to sections (About → Home, Skills, Projects, Education, Contact)
+- Interactive particle background that adapts to theme
+- Social links (GitHub, LinkedIn, coding profiles)
 
 ### Deployment
+You can deploy the `client/build` output to any static hosting.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1) Netlify or Vercel (recommended)
+- Build command: `npm run build`
+- Publish directory: `client/build`
 
-### `npm run build` fails to minify
+2) GitHub Pages
+- CRA supports GitHub Pages. Typical steps:
+  - In `client/package.json`, add `"homepage": "https://<your-username>.github.io/<repo-name>"`.
+  - Optionally add `gh-pages` to deploy, or manually publish the `client/build` folder to `gh-pages` branch.
+- Since this is an SPA, ensure your host serves `index.html` for unknown routes (Netlify _redirects or GitHub Pages SPA workaround may be needed).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Customization
+- Update personal links and details in `src/App.js` (object `Bio`).
+- Edit section components in `src/component/screen/` to change content.
+
+### Screenshots
+- Add screenshots to `client/public/` and reference them here if desired.
+
+### Author
+- Manvendra Pratap Singh
+- GitHub: `https://github.com/mannthakur310`
+- LinkedIn: `https://www.linkedin.com/in/mannthakur/`
+
+
+
